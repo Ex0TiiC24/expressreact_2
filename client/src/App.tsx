@@ -23,11 +23,10 @@ function App() {
   }, []);
 
   return (
-    <div className="h-screen w-full bg-zinc-800 text-white">
+    <div className="min-h-screen w-full bg-zinc-800 text-white">
       <div className="h-56 bg-zinc-600"></div>
-      {data.map((pokemon)=><li class="list-none">
-        {pokemon.name},{pokemon.url}
-      </li>)}
+
+      <div className="bg-black">{data.map((pokemon)=> <div>{pokemon.name}</div> )}</div>
     </div>
     
   );
