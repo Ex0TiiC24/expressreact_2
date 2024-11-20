@@ -7,7 +7,7 @@ function App() {
 
   const getPokemon = async () => {
     try {
-      const response = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=20");
+      const response = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=60");
       console.log(response.data.results)
       return response.data;
     } catch (error) {
@@ -38,8 +38,8 @@ function App() {
       <div className="h-56 bg-zinc-600 "></div>
 
       <div className="bg- flex flex-wrap flex-row gap-72 p-20 justify-center items-center">
-        {data.map((pokemon,index)=> <div key={index} className="flex justify-center items-center">{pokemon.name}
-      <img src={sprite(index)} alt={pokemon.name}>
+        {data.map((pokemon,index)=> <div key={index} className="flex border-4 min-h-60 justify-center items-center min-w-60">{pokemon.name}
+      <img className="w-50 h-50"src={sprite(index)} alt={pokemon.name}>
 
       </img></div>)}</div>
     </div>
