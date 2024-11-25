@@ -1,10 +1,16 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function Pokelist() {
-  const [data, setData] = useState([]);
+interface pokemon {
+    name: string;
+    url: string;
+  }
   
-  const getPokemon = async () => {
+
+function Pokelist() {
+  const [data, setData] = useState<pokemon[]>([]);
+  
+  const getPokemon = async ():Promise<{result:pokemon[]}> => {
     try {
       const response = await axios.get(
         "https://pokeapi.co/api/v2/pokemon?limit=60"
