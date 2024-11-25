@@ -27,7 +27,7 @@ function Pokelist() {
 
   
   useEffect(() => {
-    getPokemon().then((data) => setData(data.results));
+    getPokemon().then((data) => setData(data.result));
   }, []);
 
   const sprite = (key: number) => {
