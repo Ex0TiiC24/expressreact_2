@@ -1,4 +1,4 @@
-import Pokelist from "./components/pokelist";
+import Pokelist from "./components/Pokelist";
 import Banner from "./components/Banner";
 function App() {
   
